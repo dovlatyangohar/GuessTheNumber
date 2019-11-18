@@ -33,16 +33,16 @@ fun main(args: Array<String>) {
             continue
         }
         if ((enteredNumber != null) && (enteredNumber in 1..100)) {
+             if (enteredNumber.toInt() == generatedNumber) {
+                println("You won!")
+                break
+            }
             if (steps == 0) {
                 println("Restart")
                 println("Guess the number between 1 and 100, in $anotherTurn steps")
                 steps = anotherTurn
                 continue
-            }
-            if (enteredNumber.toInt() == generatedNumber) {
-                println("You won!")
-                break
-            }
+            } 
             if (enteredNumber.toInt() > generatedNumber) {
                 println("Take lower")
             }
